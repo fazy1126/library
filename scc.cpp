@@ -10,6 +10,7 @@ struct SCC{
         rG[to].emplace_back(from);
     }
 
+    //強連結成分の数を返す
     int build(){
         for(int i=0;i<G.size();++i) if(!used[i]) dfs(i);
         int k=0;
