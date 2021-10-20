@@ -90,7 +90,7 @@ void debug_out(T&& a,Ts&&... ts){
 constexpr char newl='\n';
 constexpr int INF=1<<30;
 constexpr ll LINF=1LL<<60;
-constexpr ld pi=3.141592653589793;
+constexpr ld pi=3.1415926535897932;
 
 void Main();
 
