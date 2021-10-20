@@ -31,20 +31,20 @@ data:
     \nusing ll=long long;\nusing ld=long double;\nusing ull=unsigned long long;\n\
     using pll=pair<ll,ll>;\nusing pii=pair<int,int>;\ntemplate <typename T> using\
     \ pque=priority_queue<T>;\ntemplate <typename T> using rpque=priority_queue<T,vector<T>,greater<T>>;\n\
-    template <typename T> using vvector=vector<vector<T>>;\ntemplate <typename T>\
-    \ using graph=vector<vector<pair<int,T>>>;\ntemplate <typename T,typename U> void\
-    \ chmax(T&x,U y){if(x<y) x=y;}\ntemplate <typename T,typename U> void chmin(T&x,U\
-    \ y){if(x>y) x=y;}\n\n// Vec<T>(size, size, ... , size, value)\ntemplate <typename\
-    \ T>\ninline vector<T> Vec(const int& a,const T& x){\n    return vector<T>(a,x);\n\
-    }\ntemplate <typename T,typename... Ts>\ninline auto Vec(const int& a,const Ts&...\
-    \ ts){\n    return vector<decltype(Vec<T>(ts...))>(a,Vec<T>(ts...));\n}\n\ntemplate\
-    \ <typename T,typename U>\nostream& operator<<(ostream& os,const pair<T,U>& p){\n\
-    \    os<<p.first<<\" \"<<p.second;\n    return os;\n}\ntemplate <typename T,typename\
-    \ U>\nistream& operator>>(istream& is,pair<T,U>& p){\n    is>>p.first>>p.second;\n\
-    \    return is;\n}\n\ntemplate <typename T>\nostream& operator<<(ostream& os,const\
-    \ vector<T>& v){\n    for(int i=0;i<(int)v.size();++i) os<<(i?\" \":\"\")<<v[i];\n\
-    \    return os;\n}\ntemplate <typename T>\nistream& operator>>(istream& is,vector<T>&\
-    \ v){\n    for(auto& x:v) is>>x;\n    return is;\n}\n\ntemplate <typename T,typename\
+    template <typename T> using VV=vector<vector<T>>;\ntemplate <typename T> using\
+    \ graph=vector<vector<pair<int,T>>>;\ntemplate <typename T,typename U> void chmax(T&x,U\
+    \ y){if(x<y) x=y;}\ntemplate <typename T,typename U> void chmin(T&x,U y){if(x>y)\
+    \ x=y;}\n\n// Vec<T>(size, size, ... , size, value)\ntemplate <typename T>\ninline\
+    \ vector<T> Vec(const int& a,const T& x){\n    return vector<T>(a,x);\n}\ntemplate\
+    \ <typename T,typename... Ts>\ninline auto Vec(const int& a,const Ts&... ts){\n\
+    \    return vector<decltype(Vec<T>(ts...))>(a,Vec<T>(ts...));\n}\n\ntemplate <typename\
+    \ T,typename U>\nostream& operator<<(ostream& os,const pair<T,U>& p){\n    os<<p.first<<\"\
+    \ \"<<p.second;\n    return os;\n}\ntemplate <typename T,typename U>\nistream&\
+    \ operator>>(istream& is,pair<T,U>& p){\n    is>>p.first>>p.second;\n    return\
+    \ is;\n}\n\ntemplate <typename T>\nostream& operator<<(ostream& os,const vector<T>&\
+    \ v){\n    for(int i=0;i<(int)v.size();++i) os<<(i?\" \":\"\")<<v[i];\n    return\
+    \ os;\n}\ntemplate <typename T>\nistream& operator>>(istream& is,vector<T>& v){\n\
+    \    for(auto& x:v) is>>x;\n    return is;\n}\n\ntemplate <typename T,typename\
     \ U>\nvoid fill(T& x,const U& y){\n    x=y;\n}\ntemplate <typename T,typename\
     \ U>\nvoid fill(vector<T>& x,const U& y){\n    for(auto& v:x) fill(x,y);\n}\n\n\
     void debug_out(){\n    cout<<\"\\n\";\n}\ntemplate <typename T,typename... Ts>\n\
@@ -58,7 +58,7 @@ data:
   isVerificationFile: false
   path: template/template.cpp
   requiredBy: []
-  timestamp: '2021-10-21 01:30:50+09:00'
+  timestamp: '2021-10-21 08:09:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj-grl-1-a.test.cpp
