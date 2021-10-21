@@ -3,7 +3,7 @@
 #include "../template/template.cpp"
 #include "../graph/dijkstra.hpp"
 
-void Main(){
+int main(){
     int V,E,r;
     cin>>V>>E>>r;
     graph<ll> g(V);
