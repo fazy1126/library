@@ -45,7 +45,7 @@ inline vector<T> make_v(const int& a,const T& x){
 }
 template <typename T,typename... Ts>
 inline auto make_v(const int& a,const Ts&... ts){
-    return vector<decltype(Vec<T>(ts...))>(a,Vec<T>(ts...));
+    return vector<decltype(make_v<T>(ts...))>(a,make_v<T>(ts...));
 }
 
 template <typename T,typename U>
