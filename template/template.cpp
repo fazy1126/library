@@ -1,7 +1,7 @@
 //#pragma GCC optimize("O3")
 //#pragma GCC target("avx2")
 //#pragma GCC optimize("unroll-loops")
-#include "bits/stdc++.h"
+#include <bits/stdc++.h>
 using namespace std;
 
 #define REP(i,n) for(int i=0;i<(int)n;++i)
@@ -25,18 +25,26 @@ using pll=pair<ll,ll>;
 using pii=pair<int,int>;
 template <typename T> using pque=priority_queue<T>;
 template <typename T> using rpque=priority_queue<T,vector<T>,greater<T>>;
-template <typename T> using VV=vector<vector<T>>;
 template <typename T> using graph=vector<vector<pair<int,T>>>;
 template <typename T,typename U> void chmax(T&x,U y){if(x<y) x=y;}
 template <typename T,typename U> void chmin(T&x,U y){if(x>y) x=y;}
 
-// Vec<T>(size, size, ... , size, value)
+struct IOSetup{
+    IOSetup(){
+        cin.tie(nullptr);
+        ios::sync_with_stdio(false);
+        cout<<fixed<<setprecision(10);
+        cerr<<fixed<<setprecision(10);
+    }
+} iosetup;
+
+// make_v<T>(size, size, ... , size, value)
 template <typename T>
-inline vector<T> Vec(const int& a,const T& x){
+inline vector<T> make_v(const int& a,const T& x){
     return vector<T>(a,x);
 }
 template <typename T,typename... Ts>
-inline auto Vec(const int& a,const Ts&... ts){
+inline auto make_v(const int& a,const Ts&... ts){
     return vector<decltype(Vec<T>(ts...))>(a,Vec<T>(ts...));
 }
 
@@ -91,12 +99,4 @@ constexpr char newl='\n';
 constexpr int INF=1<<30;
 constexpr ll LINF=1LL<<60;
 constexpr ld pi=3.1415926535897932;
-
-void Main();
-
-int main(){
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    Main();
-}
 
