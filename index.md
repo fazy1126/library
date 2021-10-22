@@ -15,14 +15,17 @@ data:
   - name: math
     pages:
     - icon: ':warning:'
-      path: math/mod_pow.hpp
-      title: math/mod_pow.hpp
+      path: math/mod-int.hpp
+      title: math/mod-int.hpp
     - icon: ':warning:'
-      path: math/prime_factor.hpp
-      title: math/prime_factor.hpp
+      path: math/mod-pow.hpp
+      title: math/mod-pow.hpp
     - icon: ':warning:'
-      path: math/prime_table.hpp
-      title: math/prime_table.hpp
+      path: math/prime-factor.hpp
+      title: math/prime-factor.hpp
+    - icon: ':warning:'
+      path: math/prime-table.hpp
+      title: math/prime-table.hpp
   - name: structure
     pages:
     - icon: ':warning:'

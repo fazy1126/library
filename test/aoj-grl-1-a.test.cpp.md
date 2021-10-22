@@ -51,19 +51,20 @@ data:
     , \";\n    debug_out(move(ts)...);\n}\n\n#ifdef _DEBUG\n#define debug(...) debug_out(__VA_ARGS__)\n\
     #else \n#define debug(...)\n#endif\n\nconstexpr char newl='\\n';\nconstexpr int\
     \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr ld pi=3.1415926535897932;\n\
-    \n#line 1 \"graph/dijkstra.hpp\"\ntemplate<typename T>\nvector<T> dijkstra(const\
-    \ vector<vector<pair<int,T>>>& g,int s){\n    using P=pair<T,int>;\n    const\
-    \ auto inf=numeric_limits<T>::max();\n    vector<T> d(g.size(),inf);\n    d[s]=0;\n\
-    \    priority_queue<P,vector<P>,greater<P>> que;\n    que.emplace(P(0,s));\n \
-    \   while(!que.empty()){\n        int idx;\n        T cost;\n        tie(cost,idx)=que.top();\
-    \ que.pop();\n        if(d[idx]<cost) continue;\n        for(const auto& e:g[idx]){\n\
-    \            T ncost=cost+e.second;\n            if(d[e.first]<=ncost) continue;\n\
-    \            d[e.first]=ncost;\n            que.emplace(ncost,e.first);\n    \
-    \    }\n    }\n    return d;\n}\n\n#line 5 \"test/aoj-grl-1-a.test.cpp\"\n\nint\
-    \ main(){\n    int V,E,r;\n    cin>>V>>E>>r;\n    graph<ll> g(V);\n    REP(i,E){\n\
-    \        int s,t,d;\n        cin>>s>>t>>d;\n        g[s].eb(t,d);\n    }\n   \
-    \ auto d=dijkstra(g,r);\n    REP(i,V){\n        if(d[i]>=LINF) cout<<\"INF\"<<newl;\n\
-    \        else cout<<d[i]<<newl;\n    }\n}\n"
+    constexpr int MOD=1e9+7;\n//constexpr int MOD=998244353\n\n#line 1 \"graph/dijkstra.hpp\"\
+    \ntemplate<typename T>\nvector<T> dijkstra(const vector<vector<pair<int,T>>>&\
+    \ g,int s){\n    using P=pair<T,int>;\n    const auto inf=numeric_limits<T>::max();\n\
+    \    vector<T> d(g.size(),inf);\n    d[s]=0;\n    priority_queue<P,vector<P>,greater<P>>\
+    \ que;\n    que.emplace(P(0,s));\n    while(!que.empty()){\n        int idx;\n\
+    \        T cost;\n        tie(cost,idx)=que.top(); que.pop();\n        if(d[idx]<cost)\
+    \ continue;\n        for(const auto& e:g[idx]){\n            T ncost=cost+e.second;\n\
+    \            if(d[e.first]<=ncost) continue;\n            d[e.first]=ncost;\n\
+    \            que.emplace(ncost,e.first);\n        }\n    }\n    return d;\n}\n\
+    \n#line 5 \"test/aoj-grl-1-a.test.cpp\"\n\nint main(){\n    int V,E,r;\n    cin>>V>>E>>r;\n\
+    \    graph<ll> g(V);\n    REP(i,E){\n        int s,t,d;\n        cin>>s>>t>>d;\n\
+    \        g[s].eb(t,d);\n    }\n    auto d=dijkstra(g,r);\n    REP(i,V){\n    \
+    \    if(d[i]>=LINF) cout<<\"INF\"<<newl;\n        else cout<<d[i]<<newl;\n   \
+    \ }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
     \n\n#include \"../template/template.cpp\"\n#include \"../graph/dijkstra.hpp\"\n\
     \nint main(){\n    int V,E,r;\n    cin>>V>>E>>r;\n    graph<ll> g(V);\n    REP(i,E){\n\
@@ -76,7 +77,7 @@ data:
   isVerificationFile: true
   path: test/aoj-grl-1-a.test.cpp
   requiredBy: []
-  timestamp: '2021-10-21 11:00:36+09:00'
+  timestamp: '2021-10-22 22:21:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj-grl-1-a.test.cpp

@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"math/prime_factor.hpp\"\ntemplate <typename T>\nmap<T, int>\
+  bundledCode: "#line 1 \"math/prime-factor.hpp\"\ntemplate <typename T>\nmap<T, int>\
     \ prime_factor(T n){\n    map<T, int> res;\n    for(T i = 2; i * i <= n; ++i){\n\
     \        while(n % i == 0){\n            res[i]++;\n            n /= i;\n    \
     \    }\n    }\n    if(n != 1) res[n] = 1;\n    return res;\n}\n"
@@ -18,15 +18,15 @@ data:
     \ res;\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: math/prime_factor.hpp
+  path: math/prime-factor.hpp
   requiredBy: []
-  timestamp: '2021-10-21 00:56:15+09:00'
+  timestamp: '2021-10-22 22:21:59+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: math/prime_factor.hpp
+documentation_of: math/prime-factor.hpp
 layout: document
 redirect_from:
-- /library/math/prime_factor.hpp
-- /library/math/prime_factor.hpp.html
-title: math/prime_factor.hpp
+- /library/math/prime-factor.hpp
+- /library/math/prime-factor.hpp.html
+title: math/prime-factor.hpp
 ---
