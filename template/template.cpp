@@ -99,4 +99,6 @@ constexpr char newl='\n';
 constexpr int INF=1<<30;
 constexpr ll LINF=1LL<<60;
 constexpr ld pi=3.1415926535897932;
+constexpr int MOD=1e9+7;
+//constexpr int MOD=998244353
 
