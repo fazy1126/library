@@ -7,8 +7,10 @@ struct SegmentTree{
 
     const F op;
     const T e;
+    
+    SegmentTree()=default;
 
-    SegmentTree(int n,const F& op,const T& e):op(op),e(e){
+    explicit SegmentTree(int n,const F& op,const T& e):op(op),e(e){
         sz=1;
         while(sz<n) sz<<=1;
         data.assign(2*sz,e);
@@ -35,6 +37,10 @@ struct SegmentTree{
             if(r&1) R=op(R,data[--r]);
         }
         return op(L,R);
+    }
+
+    T operator[](const int& k) const{
+        return data[k+sz];
     }
 };
 
