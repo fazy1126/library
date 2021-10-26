@@ -36,7 +36,7 @@ data:
       title: structure/dsu.hpp
     - icon: ':warning:'
       path: structure/lazy-segment-tree.hpp
-      title: structure/lazy-segment-tree.hpp
+      title: Lazy Segment Tree
     - icon: ':warning:'
       path: structure/segment-tree.hpp
       title: structure/segment-tree.hpp
