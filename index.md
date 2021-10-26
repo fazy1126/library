@@ -39,7 +39,7 @@ data:
       title: Lazy Segment Tree
     - icon: ':warning:'
       path: structure/segment-tree.hpp
-      title: structure/segment-tree.hpp
+      title: Segment Tree
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
