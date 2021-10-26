@@ -33,7 +33,7 @@ data:
     pages:
     - icon: ':warning:'
       path: structure/dsu.hpp
-      title: structure/dsu.hpp
+      title: Disjoint Set Union
     - icon: ':warning:'
       path: structure/lazy-segment-tree.hpp
       title: Lazy Segment Tree
@@ -53,6 +53,6 @@ data:
       title: test/aoj-grl-1-a.test.cpp
 layout: toppage
 ---
-[![fazy](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Ffazy)](https://atcoder.jp/users/fazy)
-競技プログラミングのライブラリ  
-gcc C++17~で動きます(たぶん)  
+[![fazy](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Ffazy)](https://atcoder.jp/users/fazy)  
+競技プログラミング用のライブラリ  
+gcc c++17 ~ で動きます(たぶん)  
