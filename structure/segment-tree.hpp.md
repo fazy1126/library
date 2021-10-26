@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"structure/segment_tree.hpp\"\ntemplate <typename T>\nstruct\
+  bundledCode: "#line 1 \"structure/segment-tree.hpp\"\ntemplate <typename T>\nstruct\
     \ SegmentTree{\n    using F=function<T(T,T)>;\n\n    int sz;\n    vector<T> data;\n\
     \n    const F op;\n    const T e;\n    \n    SegmentTree()=default;\n\n    explicit\
     \ SegmentTree(int n,const F& op,const T& e):op(op),e(e){\n        sz=1;\n    \
@@ -34,15 +34,15 @@ data:
     \        return data[k+sz];\n    }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
-  path: structure/segment_tree.hpp
+  path: structure/segment-tree.hpp
   requiredBy: []
-  timestamp: '2021-10-26 14:43:08+09:00'
+  timestamp: '2021-10-26 21:10:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: structure/segment_tree.hpp
+documentation_of: structure/segment-tree.hpp
 layout: document
 redirect_from:
-- /library/structure/segment_tree.hpp
-- /library/structure/segment_tree.hpp.html
-title: structure/segment_tree.hpp
+- /library/structure/segment-tree.hpp
+- /library/structure/segment-tree.hpp.html
+title: structure/segment-tree.hpp
 ---

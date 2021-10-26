@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"structure/lazy_segment_tree.hpp\"\ntemplate <typename T,typename\
+  bundledCode: "#line 1 \"structure/lazy-segment-tree.hpp\"\ntemplate <typename T,typename\
     \ U=T>\nstruct LazySegmentTree{\n    using F=function<T(T,T)>;\n    using G=function<T(T,U)>;\n\
     \    using H=function<U(U,U)>;\n\n    int sz,height;\n    vector<T> data;\n  \
     \  vector<U> lazy;\n\n    const F f;\n    const G g;\n    const H h;\n    const\
@@ -57,15 +57,15 @@ data:
     \   }\n        return f(L,R);\n    }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
-  path: structure/lazy_segment_tree.hpp
+  path: structure/lazy-segment-tree.hpp
   requiredBy: []
-  timestamp: '2021-10-21 00:56:15+09:00'
+  timestamp: '2021-10-26 21:10:18+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: structure/lazy_segment_tree.hpp
+documentation_of: structure/lazy-segment-tree.hpp
 layout: document
 redirect_from:
-- /library/structure/lazy_segment_tree.hpp
-- /library/structure/lazy_segment_tree.hpp.html
-title: structure/lazy_segment_tree.hpp
+- /library/structure/lazy-segment-tree.hpp
+- /library/structure/lazy-segment-tree.hpp.html
+title: structure/lazy-segment-tree.hpp
 ---

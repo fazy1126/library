@@ -35,11 +35,11 @@ data:
       path: structure/dsu.hpp
       title: structure/dsu.hpp
     - icon: ':warning:'
-      path: structure/lazy_segment_tree.hpp
-      title: structure/lazy_segment_tree.hpp
+      path: structure/lazy-segment-tree.hpp
+      title: structure/lazy-segment-tree.hpp
     - icon: ':warning:'
-      path: structure/segment_tree.hpp
-      title: structure/segment_tree.hpp
+      path: structure/segment-tree.hpp
+      title: structure/segment-tree.hpp
   - name: template
     pages:
     - icon: ':heavy_check_mark:'
@@ -53,3 +53,6 @@ data:
       title: test/aoj-grl-1-a.test.cpp
 layout: toppage
 ---
+[![fazy](https://img.shields.io/endpoint?url=https%3A%2F%2Fatcoder-badges.now.sh%2Fapi%2Fatcoder%2Fjson%2Ffazy)](https://atcoder.jp/users/fazy)
+競技プログラミングのライブラリ  
+gcc C++17~で動きます(たぶん)  
