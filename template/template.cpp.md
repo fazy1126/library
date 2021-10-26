@@ -43,8 +43,8 @@ data:
     void debug_out(T&& a,Ts&&... ts){\n    cout<<a;\n    if(sizeof...(Ts)>0) cout<<\"\
     , \";\n    debug_out(move(ts)...);\n}\n\n#ifdef _DEBUG\n#define debug(...) debug_out(__VA_ARGS__)\n\
     #else \n#define debug(...)\n#endif\n\nconstexpr char newl='\\n';\nconstexpr int\
-    \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr ld pi=3.1415926535897932;\n\
-    constexpr int MOD=1e9+7;\n//constexpr int MOD=998244353\n\n"
+    \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr int MOD=1e9+7;\n//constexpr\
+    \ int MOD=998244353\n\n"
   code: "//#pragma GCC optimize(\"O3\")\n//#pragma GCC target(\"avx2\")\n//#pragma\
     \ GCC optimize(\"unroll-loops\")\n#include <bits/stdc++.h>\nusing namespace std;\n\
     \n#define REP(i,n) for(int i=0;i<(int)n;++i)\n#define RREP(i,n) for(int i=(int)n-1;i>=0;--i)\n\
@@ -76,13 +76,13 @@ data:
     void debug_out(T&& a,Ts&&... ts){\n    cout<<a;\n    if(sizeof...(Ts)>0) cout<<\"\
     , \";\n    debug_out(move(ts)...);\n}\n\n#ifdef _DEBUG\n#define debug(...) debug_out(__VA_ARGS__)\n\
     #else \n#define debug(...)\n#endif\n\nconstexpr char newl='\\n';\nconstexpr int\
-    \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr ld pi=3.1415926535897932;\n\
-    constexpr int MOD=1e9+7;\n//constexpr int MOD=998244353\n\n"
+    \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr int MOD=1e9+7;\n//constexpr\
+    \ int MOD=998244353\n\n"
   dependsOn: []
   isVerificationFile: false
   path: template/template.cpp
   requiredBy: []
-  timestamp: '2021-10-22 22:21:59+09:00'
+  timestamp: '2021-10-26 14:43:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj-grl-1-a.test.cpp

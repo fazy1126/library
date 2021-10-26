@@ -15,6 +15,9 @@ data:
   - name: math
     pages:
     - icon: ':warning:'
+      path: math/combination.hpp
+      title: math/combination.hpp
+    - icon: ':warning:'
       path: math/mod-int.hpp
       title: math/mod-int.hpp
     - icon: ':warning:'
