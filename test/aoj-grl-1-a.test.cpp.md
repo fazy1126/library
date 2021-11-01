@@ -46,12 +46,12 @@ data:
     \ v){\n    for(auto& x:v) is>>x;\n    return is;\n}\n\ntemplate <typename T,typename\
     \ U>\nvoid fill(T& x,const U& y){\n    x=y;\n}\ntemplate <typename T,typename\
     \ U>\nvoid fill(vector<T>& x,const U& y){\n    for(auto& v:x) fill(x,y);\n}\n\n\
-    void debug_out(){\n    cout<<\"\\n\";\n}\ntemplate <typename T,typename... Ts>\n\
+    void debug_out(){\n    cout<<endl;\n}\ntemplate <typename T,typename... Ts>\n\
     void debug_out(T&& a,Ts&&... ts){\n    cout<<a;\n    if(sizeof...(Ts)>0) cout<<\"\
     , \";\n    debug_out(move(ts)...);\n}\n\n#ifdef _DEBUG\n#define debug(...) debug_out(__VA_ARGS__)\n\
     #else \n#define debug(...)\n#endif\n\nconstexpr char newl='\\n';\nconstexpr int\
     \ INF=1<<30;\nconstexpr ll LINF=1LL<<60;\nconstexpr int MOD=1e9+7;\n//constexpr\
-    \ int MOD=998244353\n\n#line 1 \"graph/dijkstra.hpp\"\ntemplate<typename T>\n\
+    \ int MOD=998244353;\n\n#line 1 \"graph/dijkstra.hpp\"\ntemplate<typename T>\n\
     vector<T> dijkstra(const vector<vector<pair<int,T>>>& g,int s){\n    using P=pair<T,int>;\n\
     \    const auto inf=numeric_limits<T>::max();\n    vector<T> d(g.size(),inf);\n\
     \    d[s]=0;\n    priority_queue<P,vector<P>,greater<P>> que;\n    que.emplace(P(0,s));\n\
@@ -76,7 +76,7 @@ data:
   isVerificationFile: true
   path: test/aoj-grl-1-a.test.cpp
   requiredBy: []
-  timestamp: '2021-10-26 14:43:08+09:00'
+  timestamp: '2021-11-01 18:09:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj-grl-1-a.test.cpp

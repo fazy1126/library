@@ -18,6 +18,12 @@ data:
       path: math/combination.hpp
       title: math/combination.hpp
     - icon: ':warning:'
+      path: math/gauss-jordan.hpp
+      title: "Gauss Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
+    - icon: ':warning:'
+      path: math/matrix.hpp
+      title: Matrix
+    - icon: ':warning:'
       path: math/mod-int.hpp
       title: math/mod-int.hpp
     - icon: ':warning:'
