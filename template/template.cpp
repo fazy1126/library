@@ -80,7 +80,7 @@ void fill(vector<T>& x,const U& y){
 }
 
 void debug_out(){
-    cout<<"\n";
+    cout<<endl;
 }
 template <typename T,typename... Ts>
 void debug_out(T&& a,Ts&&... ts){
@@ -99,5 +99,5 @@ constexpr char newl='\n';
 constexpr int INF=1<<30;
 constexpr ll LINF=1LL<<60;
 constexpr int MOD=1e9+7;
-//constexpr int MOD=998244353
+//constexpr int MOD=998244353;
 
