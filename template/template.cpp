@@ -76,7 +76,7 @@ void fill(T& x,const U& y){
 }
 template <typename T,typename U>
 void fill(vector<T>& x,const U& y){
-    for(auto& v:x) fill(x,y);
+    for(auto& v:x) fill(v,y);
 }
 
 void debug_out(){

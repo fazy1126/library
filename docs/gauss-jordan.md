@@ -1,5 +1,5 @@
 ---
-title: Gauss Jordanの掃き出し法(mod p)
+title: Gauss-Jordanの掃き出し法(mod p)
 documentation_of: //math/gauss-jordan.hpp
 ---
 
