@@ -2,15 +2,15 @@ template <typename T>
 struct SegmentTree{
     using F=function<T(T,T)>;
 
-    int sz;
+    int n,sz;
     vector<T> data;
 
     const F f;
     const T e;
-    
+
     SegmentTree()=default;
 
-    explicit SegmentTree(int n,const F& f,const T& e):f(f),e(e){
+    explicit SegmentTree(int n,const F& f,const T& e):n(n),f(f),e(e){
         sz=1;
         while(sz<n) sz<<=1;
         data.assign(2*sz,e);
@@ -37,6 +37,29 @@ struct SegmentTree{
             if(b&1) R=f(R,data[--b]);
         }
         return f(L,R);
+    }
+
+    template <typename C>
+    int find_first(int l,const C& check) const{
+        if(l>=n) return n;
+        l+=sz;
+        T now=e;
+        do{
+            while((l&1)==0) l>>=1;
+            if(check(f(now,data[l]))){
+                while(l<sz){
+                    l<<=1;
+                    T next=f(now,data[l]);
+                    if(!check(next)){
+                        now=next;
+                        l++;
+                    }
+                }
+                return l-sz+1;
+            }
+            now=f(now,data[l++]);
+        } while((l&-l)!=l);
+        return n;
     }
 
     T operator[](const int& k) const{
