@@ -12,4 +12,6 @@ documentation_of: //structure/segment-tree.hpp
 * `build()`: 木を構築する。初期化が終わったら呼ぶ必要がある。$O(n)$
 * `update(k,x)`: `k`番目の要素を`x`にする(一点更新)。$O(\log n)$
 * `query(a,b)`: 半開区間$[a,b)$に演算`f`を適用した結果を返す。$O(\log n)$
-* `find_first(l,check)`: `check`はbool値を返す関数。$[l,x)$に`f`を適用した結果が`check`を満たす最小のxを返す。存在しないときは$n$を返す。
+* `find_first(l,check)`: `check`はbool値を返す関数。$[l,x)$に`f`を適用した結果が`check`を満たす最小のxを返す。存在しないときは`n`を返す。$O(\log n)$
+* `find_last(r,check)`: `check`はbool値を返す関数。$[x,r)$に`f`を適用した結果が`check`を満たす最大のxを返す。存在しないときは`-1`を返す。$O(\log n)$
+* `operator[k]`: k番目の要素を返す。$O(1)$

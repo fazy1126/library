@@ -62,6 +62,30 @@ struct SegmentTree{
         return n;
     }
 
+    template <typename C>
+    int find_last(int r,const C& check) const{
+        if(r<=0) return -1;
+        r+=sz;
+        T now=e;
+        do{
+            r--;
+            while(r>1&&(r&1)) r>>=1;
+            if(check(f(now,data[r]))){
+                while(r<sz){
+                    r=(r<<1)+1;
+                    auto next=f(now,data[r]);
+                    if(!check(next)){
+                        now=next;
+                        r--;
+                    }
+                }
+                return r-sz;
+            }
+            now=f(now,data[r]);
+        } while((r&-r)!=r);
+        return -1;
+    }
+
     T operator[](const int& k) const{
         return data[k+sz];
     }
