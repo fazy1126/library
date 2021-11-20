@@ -35,8 +35,12 @@ data:
   verifiedWith: []
 documentation_of: graph/diameter.hpp
 layout: document
-redirect_from:
-- /library/graph/diameter.hpp
-- /library/graph/diameter.hpp.html
-title: graph/diameter.hpp
+title: "Diameter(\u6728\u306E\u76F4\u5F84)"
 ---
+
+## 概要
+木の直径を求める。
+まずある頂点から最も遠い頂点をdfsで求める。次にその頂点から最も遠い頂点をdfsで求めると、その頂点との距離が木の直径である。計算量は頂点数を$V$として$O(V)$。
+
+## 使い方
+* `diameter(G)`: `G`は木。重み付きでも重みなしでも良い。

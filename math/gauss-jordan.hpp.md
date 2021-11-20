@@ -63,7 +63,7 @@ data:
   verifiedWith: []
 documentation_of: math/gauss-jordan.hpp
 layout: document
-title: "Gauss Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
+title: "Gauss-Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
 ---
 
 ## 概要

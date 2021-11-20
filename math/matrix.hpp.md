@@ -4,7 +4,7 @@ data:
   _extendedRequiredBy:
   - icon: ':warning:'
     path: math/gauss-jordan.hpp
-    title: "Gauss Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
+    title: "Gauss-Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp

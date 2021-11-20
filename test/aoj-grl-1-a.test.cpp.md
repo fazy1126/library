@@ -45,7 +45,7 @@ data:
     \    return os;\n}\ntemplate <typename T>\nistream& operator>>(istream& is,vector<T>&\
     \ v){\n    for(auto& x:v) is>>x;\n    return is;\n}\n\ntemplate <typename T,typename\
     \ U>\nvoid fill(T& x,const U& y){\n    x=y;\n}\ntemplate <typename T,typename\
-    \ U>\nvoid fill(vector<T>& x,const U& y){\n    for(auto& v:x) fill(x,y);\n}\n\n\
+    \ U>\nvoid fill(vector<T>& x,const U& y){\n    for(auto& v:x) fill(v,y);\n}\n\n\
     void debug_out(){\n    cout<<endl;\n}\ntemplate <typename T,typename... Ts>\n\
     void debug_out(T&& a,Ts&&... ts){\n    cout<<a;\n    if(sizeof...(Ts)>0) cout<<\"\
     , \";\n    debug_out(move(ts)...);\n}\n\n#ifdef _DEBUG\n#define debug(...) debug_out(__VA_ARGS__)\n\
@@ -76,7 +76,7 @@ data:
   isVerificationFile: true
   path: test/aoj-grl-1-a.test.cpp
   requiredBy: []
-  timestamp: '2021-11-01 18:09:56+09:00'
+  timestamp: '2021-11-16 19:17:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj-grl-1-a.test.cpp

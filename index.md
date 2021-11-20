@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':warning:'
       path: graph/diameter.hpp
-      title: graph/diameter.hpp
+      title: "Diameter(\u6728\u306E\u76F4\u5F84)"
     - icon: ':heavy_check_mark:'
       path: graph/dijkstra.hpp
       title: graph/dijkstra.hpp
@@ -19,7 +19,7 @@ data:
       title: math/combination.hpp
     - icon: ':warning:'
       path: math/gauss-jordan.hpp
-      title: "Gauss Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
+      title: "Gauss-Jordan\u306E\u6383\u304D\u51FA\u3057\u6CD5(mod p)"
     - icon: ':warning:'
       path: math/matrix.hpp
       title: Matrix
@@ -43,6 +43,9 @@ data:
     - icon: ':warning:'
       path: structure/lazy-segment-tree.hpp
       title: Lazy Segment Tree
+    - icon: ':warning:'
+      path: structure/range-set.hpp
+      title: Range Set
     - icon: ':warning:'
       path: structure/segment-tree.hpp
       title: Segment Tree
