@@ -27,8 +27,16 @@ data:
     \          if(!check(next)){\n                        now=next;\n            \
     \            l++;\n                    }\n                }\n                return\
     \ l-sz+1;\n            }\n            now=f(now,data[l++]);\n        } while((l&-l)!=l);\n\
-    \        return n;\n    }\n\n    T operator[](const int& k) const{\n        return\
-    \ data[k+sz];\n    }\n};\n\n"
+    \        return n;\n    }\n\n    template <typename C>\n    int find_last(int\
+    \ r,const C& check) const{\n        if(r<=0) return -1;\n        r+=sz;\n    \
+    \    T now=e;\n        do{\n            r--;\n            while(r>1&&(r&1)) r>>=1;\n\
+    \            if(check(f(now,data[r]))){\n                while(r<sz){\n      \
+    \              r=(r<<1)+1;\n                    auto next=f(now,data[r]);\n  \
+    \                  if(!check(next)){\n                        now=next;\n    \
+    \                    r--;\n                    }\n                }\n        \
+    \        return r-sz;\n            }\n            now=f(now,data[r]);\n      \
+    \  } while((r&-r)!=r);\n        return -1;\n    }\n\n    T operator[](const int&\
+    \ k) const{\n        return data[k+sz];\n    }\n};\n\n"
   code: "template <typename T>\nstruct SegmentTree{\n    using F=function<T(T,T)>;\n\
     \n    int n,sz;\n    vector<T> data;\n\n    const F f;\n    const T e;\n\n   \
     \ SegmentTree()=default;\n\n    explicit SegmentTree(int n,const F& f,const T&\
@@ -47,13 +55,21 @@ data:
     \          if(!check(next)){\n                        now=next;\n            \
     \            l++;\n                    }\n                }\n                return\
     \ l-sz+1;\n            }\n            now=f(now,data[l++]);\n        } while((l&-l)!=l);\n\
-    \        return n;\n    }\n\n    T operator[](const int& k) const{\n        return\
-    \ data[k+sz];\n    }\n};\n\n"
+    \        return n;\n    }\n\n    template <typename C>\n    int find_last(int\
+    \ r,const C& check) const{\n        if(r<=0) return -1;\n        r+=sz;\n    \
+    \    T now=e;\n        do{\n            r--;\n            while(r>1&&(r&1)) r>>=1;\n\
+    \            if(check(f(now,data[r]))){\n                while(r<sz){\n      \
+    \              r=(r<<1)+1;\n                    auto next=f(now,data[r]);\n  \
+    \                  if(!check(next)){\n                        now=next;\n    \
+    \                    r--;\n                    }\n                }\n        \
+    \        return r-sz;\n            }\n            now=f(now,data[r]);\n      \
+    \  } while((r&-r)!=r);\n        return -1;\n    }\n\n    T operator[](const int&\
+    \ k) const{\n        return data[k+sz];\n    }\n};\n\n"
   dependsOn: []
   isVerificationFile: false
   path: structure/segment-tree.hpp
   requiredBy: []
-  timestamp: '2021-11-20 14:00:08+09:00'
+  timestamp: '2021-11-20 14:27:40+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: structure/segment-tree.hpp
@@ -70,4 +86,6 @@ title: Segment Tree
 * `build()`: 木を構築する。初期化が終わったら呼ぶ必要がある。$O(n)$
 * `update(k,x)`: `k`番目の要素を`x`にする(一点更新)。$O(\log n)$
 * `query(a,b)`: 半開区間$[a,b)$に演算`f`を適用した結果を返す。$O(\log n)$
-* `find_first(l,check)`: `check`はbool値を返す関数。$[l,x)$に`f`を適用した結果が`check`を満たす最小のxを返す。存在しないときは$n$を返す。
+* `find_first(l,check)`: `check`はbool値を返す関数。$[l,x)$に`f`を適用した結果が`check`を満たす最小のxを返す。存在しないときは`n`を返す。$O(\log n)$
+* `find_last(r,check)`: `check`はbool値を返す関数。$[x,r)$に`f`を適用した結果が`check`を満たす最大のxを返す。存在しないときは`-1`を返す。$O(\log n)$
+* `operator[k]`: k番目の要素を返す。$O(1)$
