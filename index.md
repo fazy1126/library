@@ -54,6 +54,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: template/template.cpp
       title: template/template.cpp
+  - name: tree
+    pages:
+    - icon: ':warning:'
+      path: tree/lca.hpp
+      title: LCA
   verificationCategories:
   - name: test
     pages:
