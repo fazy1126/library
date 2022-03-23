@@ -1,15 +1,9 @@
-//#pragma GCC optimize("O3")
-//#pragma GCC target("avx2")
-//#pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(i,n) for(int i=0;i<(int)n;++i)
-#define RREP(i,n) for(int i=(int)n-1;i>=0;--i)
-#define FOR(i,m,n) for(int i=(int)m;i<(int)n;++i)
-#define RFOR(i,m,n) for(int i=(int)m-1;i>=(int)n;--i)
-#define ALL(x) x.begin(),x.end()
-#define RALL(x) x.rbegin(),x.rend()
+#define rep(i,n) for(int i=0;i<(int)n;++i)
+#define all(x) x.begin(),x.end()
+#define rall(x) x.rbegin(),x.rend()
 #define SIZE(x) (int)x.size()
 #define UNIQUE(x) x.erase(unique(x.begin(),x.end()),x.end());
 #define BIT(x) (1LL<<(x))
@@ -22,10 +16,9 @@ using ll=long long;
 using ld=long double;
 using ull=unsigned long long;
 using pll=pair<ll,ll>;
-using pii=pair<int,int>;
+using pint=pair<int,int>;
 template <typename T> using pque=priority_queue<T>;
 template <typename T> using rpque=priority_queue<T,vector<T>,greater<T>>;
-template <typename T> using graph=vector<vector<pair<int,T>>>;
 template <typename T,typename U> void chmax(T&x,U y){if(x<y) x=y;}
 template <typename T,typename U> void chmin(T&x,U y){if(x>y) x=y;}
 
@@ -37,16 +30,6 @@ struct IOSetup{
         cerr<<fixed<<setprecision(10);
     }
 } iosetup;
-
-// make_v<T>(size, size, ... , size, value)
-template <typename T>
-inline vector<T> make_v(const int& a,const T& x){
-    return vector<T>(a,x);
-}
-template <typename T,typename... Ts>
-inline auto make_v(const int& a,const Ts&... ts){
-    return vector<decltype(make_v<T>(ts...))>(a,make_v<T>(ts...));
-}
 
 template <typename T,typename U>
 ostream& operator<<(ostream& os,const pair<T,U>& p){
