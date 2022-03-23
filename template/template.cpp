@@ -53,15 +53,6 @@ istream& operator>>(istream& is,vector<T>& v){
     return is;
 }
 
-template <typename T,typename U>
-void fill(T& x,const U& y){
-    x=y;
-}
-template <typename T,typename U>
-void fill(vector<T>& x,const U& y){
-    for(auto& v:x) fill(v,y);
-}
-
 void debug_out(){
     cout<<endl;
 }
